@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Student in Electrical and Computer Engineering, Purdue University
+subtitle: Graduate Student in Electrical and Computer Engineering, Purdue University
 
 profile:
   align: right
@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am **John Hwangyu Cho**, a Ph.D. student in Electrical and Computer Engineering at Purdue University.
+I am **John Hwangyu Cho**, a graduate student in Electrical and Computer Engineering at Purdue University.
 My research sits at the intersection of **computer architecture**, **systems for machine learning**, and
 **efficient hardware acceleration**.
 
