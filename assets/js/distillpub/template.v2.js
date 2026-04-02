@@ -2695,7 +2695,14 @@ d-citation-list .references .title {
           var rest = grammar.rest;
           if (rest) {
             for (var token in rest) {
-              grammar[token] = rest[token];
+              if (
+                Object.prototype.hasOwnProperty.call(rest, token) &&
+                token !== "__proto__" &&
+                token !== "constructor" &&
+                token !== "prototype"
+              ) {
+                grammar[token] = rest[token];
+              }
             }
 
             delete grammar.rest;
@@ -3087,7 +3094,7 @@ d-citation-list .references .title {
       comment: /<!--[\s\S]*?-->/,
       prolog: /<\?[\s\S]+?\?>/,
       doctype: {
-        pattern: /<!DOCTYPE(?:[^>"'[\]]|"[^"]*"|'[^']*')+(?:\[(?:(?!<!--)[^"'\]]|"[^"]*"|'[^']*'|<!--[\s\S]*?-->)*\]\s*)?>/i,
+        pattern: /<!DOCTYPE[\s\S]*?>/i,
         greedy: true,
       },
       cdata: /<!\[CDATA\[[\s\S]*?]]>/i,
@@ -3170,7 +3177,7 @@ d-citation-list .references .title {
         var def = {};
         def[tagName] = {
           pattern: RegExp(
-            /(<__[\s\S]*?>)(?:<!\[CDATA\[[\s\S]*?\]\]>\s*|[\s\S])*?(?=<\/__>)/.source.replace(/__/g, function () {
+            /(<__[\s\S]*?>)[\s\S]*?(?=<\/__>)/.source.replace(/__/g, function () {
               return tagName;
             }),
             "i"
@@ -3330,7 +3337,7 @@ d-citation-list .references .title {
     Prism.languages.insertBefore("javascript", "keyword", {
       regex: {
         pattern:
-          /((?:^|[^$\w\xA0-\uFFFF."'\])\s])\s*)\/(?:\[(?:[^\]\\\r\n]|\\.)*]|\\.|[^/\\\[\r\n])+\/[gimyus]{0,6}(?=(?:\s|\/\*[\s\S]*?\*\/)*(?:$|[\r\n,.;:})\]]|\/\/))/,
+          /((?:^|[^$\w\xA0-\uFFFF."'\\])\s*)\/(?![/*])(?:\\.|[^/\\\r\n])+\/[dgimsuvy]{0,8}/,
         lookbehind: true,
         greedy: true,
       },
@@ -4235,7 +4242,7 @@ ${css}
 
       if (this.hasAttribute("block")) {
         // normalize the tab indents
-        content = content.replace(/\n/, "");
+        content = content.replace(/^\n+/, "");
         const tabs = content.match(/\s*/);
         content = content.replace(new RegExp("\n" + tabs, "g"), "\n");
         content = content.trim();
@@ -4646,9 +4653,8 @@ d-references {
   }
 
   function renderTOC(element, headings) {
-    let ToC = `
-  <style>
-
+    const style = document.createElement("style");
+    style.textContent = `
   d-toc {
     contain: layout style;
     display: block;
@@ -4665,33 +4671,45 @@ d-references {
   d-toc a {
     border-bottom: none;
     text-decoration: none;
-  }
+  }`;
 
-  </style>
-  <nav role="navigation" class="table-of-contents"></nav>
-  <h2>Table of contents</h2>
-  <ul>`;
+    const nav = document.createElement("nav");
+    nav.setAttribute("role", "navigation");
+    nav.className = "table-of-contents";
+
+    const heading = document.createElement("h2");
+    heading.textContent = "Table of contents";
+    nav.appendChild(heading);
+
+    const list = document.createElement("ul");
+    nav.appendChild(list);
 
     for (const el of headings) {
       // should element be included in TOC?
       const isInTitle = el.parentElement.tagName == "D-TITLE";
       const isException = el.getAttribute("no-toc");
       if (isInTitle || isException) continue;
-      // create TOC entry
-      const title = el.textContent;
-      const link = "#" + el.getAttribute("id");
 
-      let newLine = "<li>" + '<a href="' + link + '">' + title + "</a>" + "</li>";
+      const title = el.textContent || "";
+      const rawId = el.getAttribute("id") || "";
+
+      const li = document.createElement("li");
+      const anchor = document.createElement("a");
+      anchor.setAttribute("href", "#" + rawId);
+      anchor.textContent = title;
+      li.appendChild(anchor);
+
       if (el.tagName == "H3") {
-        newLine = "<ul>" + newLine + "</ul>";
+        const nested = document.createElement("ul");
+        nested.appendChild(li);
+        list.appendChild(nested);
       } else {
-        newLine += "<br>";
+        list.appendChild(li);
+        list.appendChild(document.createElement("br"));
       }
-      ToC += newLine;
     }
 
-    ToC += "</ul></nav>";
-    element.innerHTML = ToC;
+    element.replaceChildren(style, nav);
   }
 
   // Copyright 2018 The Distill Template Authors
