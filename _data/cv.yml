@@ -1,0 +1,87 @@
+cv:
+  name: John Hwangyu Cho
+  label: Ph.D. Student, Electrical and Computer Engineering
+  email: johnhwangyucho@gmail.com
+  location: West Lafayette, IN
+  image: ""
+  summary: Researcher in computer architecture and systems for secure, efficient machine learning acceleration.
+
+  social_networks:
+    - network: GitHub
+      username: 3mpty9
+    - network: LinkedIn
+      username: johnhwangyucho
+
+  sections:
+    Education:
+      - institution: Purdue University
+        location: West Lafayette, IN
+        url: https://www.purdue.edu/
+        area: Electrical and Computer Engineering
+        studyType: Ph.D.
+        start_date: 2023
+        end_date: present
+        highlights:
+          - Focus on computer architecture, systems optimization, and secure ML acceleration.
+
+      - institution: National University of Singapore
+        location: Singapore
+        url: https://www.nus.edu.sg/
+        area: Computer Engineering
+        studyType: B.Eng.
+        start_date: 2018
+        end_date: 2022
+
+    Experience:
+      - company: Networked and Embedded Intelligent Systems Lab
+        position: Graduate Researcher
+        location: Purdue University
+        start_date: 2023
+        end_date: present
+        highlights:
+          - Profiled bottlenecks in CKKS-based pipelines and improved key operations for practical secure inference.
+          - Developed architecture-aware optimization methods spanning software kernels and hardware constraints.
+
+      - company: Systems and Software Projects
+        position: Research and Engineering Intern
+        location: Various
+        start_date: 2021
+        end_date: 2023
+        highlights:
+          - Worked on performance-focused software systems and tooling for ML workflows.
+
+    Awards:
+      - title: DAC Young Fellowship
+        date: 2025
+        awarder: Design Automation Conference
+
+      - title: Emerging Contributor Award
+        date: 2025
+        awarder: Academic Program
+
+    Publications:
+      - title: Architecture-Aware Operator Scheduling for Practical CKKS Inference
+        authors:
+          - John Hwangyu Cho
+          - Jane Collaborator
+          - Prof. Advisor
+        publisher: DAC
+        releaseDate: 2026
+
+      - title: Profiling Bottlenecks in Homomorphic ML Workloads on Modern Accelerators
+        authors:
+          - John Hwangyu Cho
+          - Alex Collaborator
+          - Min Collaborator
+        publisher: MICRO
+        releaseDate: 2025
+
+    Skills:
+      - name: Research Areas
+        level: Advanced
+        icon: fa-solid fa-microchip
+        keywords: "Computer architecture, systems optimization, secure ML, homomorphic encryption, accelerator design"
+
+    Languages:
+      - name: English
+        summary: Fluent
