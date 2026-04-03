@@ -3,13 +3,12 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: John
-middle_name: Hwangyu
+first_name: Hwangyu
+middle_name:
 last_name: Cho
-contact_note: >
-  Feel free to reach out by email for collaboration, research discussions, or student opportunities.
+contact_note:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal academic website for John Hwangyu Cho. Research interests include computer architecture,
+  Personal academic website for Hwangyu Cho. Research interests include computer architecture,
   systems, and efficient machine learning acceleration.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
@@ -271,7 +270,7 @@ display_categories: [] # these categories will be displayed on the front page of
 
 scholar:
   last_name: [Cho]
-  first_name: [John, J., Hwangyu]
+  first_name: [Hwangyu, H.]
 
   style: apa
   locale: en
