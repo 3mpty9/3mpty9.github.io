@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Ph.D. Student in Electrical and Computer Engineering, Purdue University
+subtitle: "Graduate student in <a href='https://engineering.purdue.edu/neis/'>NEIS Lab</a> @ Purdue University"
 
 profile:
   align: right
@@ -27,24 +27,12 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am **John Hwangyu Cho**, a Ph.D. student in Electrical and Computer Engineering at Purdue University.
-My research sits at the intersection of **computer architecture**, **systems for machine learning**, and
-**efficient hardware acceleration**.
+I am a Master's student in Electrical and Computer Engineering at Purdue University, advised by
+Dr. Younghyun Kim, and a member of the Networked and Embedded Intelligent Systems (NEIS) Lab.
+My research focuses on energy-efficient domain specific hardware accelerator and hardware-software
+co-design.
 
-My goal is to build practical, high-performance systems that bridge theory and implementation.
-I am especially interested in:
+I am also interested in hardware-software co-design methodologies for scalable accelerator
+architectures, including stochastic computing techniques for energy-efficient AI inference.
 
-- domain-specific accelerators and architectural support for ML workloads
-- system-level optimization across hardware and software stacks
-- scalable and reliable design methodologies for emerging compute platforms
-
-## Short Bio
-
-Before graduate study, I worked on software and systems projects that shaped my interest in
-end-to-end performance optimization. I enjoy designing research artifacts that are both
-scientifically rigorous and practically reusable.
-
-## Contact
-
-The best way to reach me is by email. I am always happy to discuss collaborations,
-research ideas, and student projects.
+I was honored with the 2025 DAC Young Fellowship.
