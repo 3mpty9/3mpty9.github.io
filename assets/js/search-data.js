@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-publications",
           title: "publications",
-          description: "Selected publications in reverse chronological order.",
+          description: "Publication list.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
@@ -29,13 +29,6 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
-          },
-        },{id: "nav-news",
-          title: "news",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/news/";
           },
         },{id: "post-a-post-with-plotly-js",
         
@@ -383,14 +376,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-presented-our-recent-work-on-efficient-ml-system-acceleration-at-a-departmental-seminar",
-          title: 'Presented our recent work on efficient ML system acceleration at a departmental seminar....',
-          description: "",
-          section: "News",},{id: "news-started-building-this-website-using-the-al-folio-template-with-a-research-focused-structure",
-          title: 'Started building this website using the al-folio template with a research-focused structure.',
-          description: "",
-          section: "News",},{id: "news-launched-a-redesigned-personal-website-based-on-the-al-folio-template",
-          title: 'Launched a redesigned personal website based on the al-folio template.',
+            },},{id: "news-1-paper-accepted-dac-26",
+          title: '1 paper accepted @ DAC’26',
           description: "",
           section: "News",},{id: "projects-ckks-kernel-profiler",
           title: 'CKKS Kernel Profiler',
@@ -427,7 +414,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+          window.open("/assets/pdf/CO-MAC_DAC26.pdf", "_blank");
         },
       },{
         id: 'social-email',
@@ -435,13 +422,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("mailto:%6A%6F%68%6E%68%77%61%6E%67%79%75%63%68%6F@%67%6D%61%69%6C.%63%6F%6D", "_blank");
-        },
-      },{
-        id: 'social-github',
-        title: 'GitHub',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://github.com/3mpty9", "_blank");
         },
       },{
         id: 'social-linkedin',
