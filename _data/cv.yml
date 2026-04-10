@@ -1,54 +1,58 @@
 cv:
-  name: John Hwangyu Cho
-  label: Ph.D. Student, Electrical and Computer Engineering
-  email: johnhwangyucho@gmail.com
+  name: Hwangyu Cho
+  label: "Master's Student, Electrical and Computer Engineering"
+  email: cho620@purdue.edu
   location: West Lafayette, IN
   image: ""
-  summary: Researcher in computer architecture and systems for secure, efficient machine learning acceleration.
-
-  social_networks:
-    - network: GitHub
-      username: 3mpty9
-    - network: LinkedIn
-      username: johnhwangyucho
+  summary: Researcher in computer architecture and systems for efficient machine learning acceleration.
 
   sections:
+    Experience:
+      - company: Purdue University
+        position: Graduate Research Assistant
+        location: West Lafayette, IN
+        start_date: 2024-08
+        end_date: present
+        highlights:
+          - Achieved 54.8% inference speedup by designing and validating a novel accelerator microarchitecture through custom cycle-level simulation and latency modeling.
+          - Built a Python-based simulation and characterization framework to analyze MAC-level latency and accuracy trade-offs across multiple bitwidths, quantifying performance improvements of 17-55% over prior stochastic architectures.
+          - Conducted architecture-performance exploration across CNN models, analyzing compute utilization and workload scaling behavior.
+
+      - company: Hanyang University
+        position: Undergraduate Research Assistant
+        location: Seoul, Korea
+        start_date: 2023-07
+        end_date: 2023-12
+        highlights:
+          - Enabled deployment of a 13B-parameter Korean LLM on 16 GB GPUs by applying 4-bit QLoRA quantization, reducing memory usage by 82% while maintaining model quality.
+          - Developed a domain-specific chatbot and end-to-end RAG pipeline, profiling latency and memory usage to understand practical constraints of GPU-based LLM inference.
+
+      - company: Korea Institute of Science and Technology
+        position: Co-op Research Engineer
+        location: Seoul, Korea
+        start_date: 2022-09
+        end_date: 2023-02
+        highlights:
+          - Designed and implemented a compact FPGA-based digital lock-in amplifier using Vivado and Vitis, replacing bulky analog equipment for gas measurement and enabling parallel processing of multiple experiments.
+          - Integrated real-time signal processing algorithms directly on FPGA hardware, eliminating dependency on external equipment while maintaining measurement accuracy comparable to traditional multi-instrument setups.
+          - Developed a four-layer PCB for an edge computing system using Altium and Allegro, collaborating cross-functionally with hardware engineers to optimize board layout for real-time data processing performance.
+
     Education:
       - institution: Purdue University
         location: West Lafayette, IN
-        url: https://www.purdue.edu/
         area: Electrical and Computer Engineering
-        studyType: Ph.D.
-        start_date: 2023
+        studyType: M.S.
+        start_date: 2024
         end_date: present
         highlights:
           - Focus on computer architecture, systems optimization, and secure ML acceleration.
 
-      - institution: National University of Singapore
-        location: Singapore
-        url: https://www.nus.edu.sg/
-        area: Computer Engineering
-        studyType: B.Eng.
+      - institution: Hanyang University
+        location: Seoul, South Korea
+        area: Electronic Engineering
+        studyType: B.S.
         start_date: 2018
-        end_date: 2022
-
-    Experience:
-      - company: Networked and Embedded Intelligent Systems Lab
-        position: Graduate Researcher
-        location: Purdue University
-        start_date: 2023
-        end_date: present
-        highlights:
-          - Profiled bottlenecks in CKKS-based pipelines and improved key operations for practical secure inference.
-          - Developed architecture-aware optimization methods spanning software kernels and hardware constraints.
-
-      - company: Systems and Software Projects
-        position: Research and Engineering Intern
-        location: Various
-        start_date: 2021
-        end_date: 2023
-        highlights:
-          - Worked on performance-focused software systems and tooling for ML workflows.
+        end_date: 2024
 
     Awards:
       - title: DAC Young Fellowship
@@ -61,27 +65,17 @@ cv:
 
     Publications:
       - title: Architecture-Aware Operator Scheduling for Practical CKKS Inference
-        authors:
-          - John Hwangyu Cho
-          - Jane Collaborator
-          - Prof. Advisor
         publisher: DAC
         releaseDate: 2026
-
-      - title: Profiling Bottlenecks in Homomorphic ML Workloads on Modern Accelerators
-        authors:
-          - John Hwangyu Cho
-          - Alex Collaborator
-          - Min Collaborator
-        publisher: MICRO
-        releaseDate: 2025
 
     Skills:
       - name: Research Areas
         level: Advanced
         icon: fa-solid fa-microchip
-        keywords: "Computer architecture, systems optimization, secure ML, homomorphic encryption, accelerator design"
+        keywords: "Computer architecture, hardware-software co-design, accelerator design"
 
     Languages:
       - name: English
+        summary: Fluent
+      - name: Korean
         summary: Fluent
