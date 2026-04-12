@@ -21,22 +21,12 @@ cv:
         studyType: Master of Science
         start_date: 2024
         end_date: 2026
-        highlights:
-          - Advisor: Prof. Younghyun Kim
-          - Expected graduation: May 2026
-          - Research assistantship with full funding (Jan. 2025 - May 2026)
 
       - institution: Hanyang University
         location: Seoul, Korea
         url: https://www.hanyang.ac.kr/
         area: Electronic Engineering
         studyType: Bachelor of Science (Highest Honors)
-        start_date: 2018
-        end_date: 2024
-        highlights:
-          - Graduation: Feb. 2024
-          - GPA: 4.02/4.5
-          - "Dean's List: Spring 2018, Fall 2018, Fall 2021, Spring 2022, Spring 2023, Fall 2023"
 
     Academic Interests:
       - name: Research Interests
