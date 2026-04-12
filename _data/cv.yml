@@ -1,16 +1,16 @@
 cv:
-  name: John Hwangyu Cho
-  label: Ph.D. Student, Electrical and Computer Engineering
-  email: johnhwangyucho@gmail.com
+  name: Hwangyu Cho
+  label: Graduate Research Assistant, Electrical and Computer Engineering
+  email: cho620@purdue.edu
+  phone: (765) 543-5725
   location: West Lafayette, IN
   image: ""
-  summary: Researcher in computer architecture and systems for secure, efficient machine learning acceleration.
+  website: https://linkedin.com/in/hwangyucho
+  summary: Research focused on domain-specific accelerators, hardware-software co-design for ML systems, and energy-efficient accelerator architectures.
 
   social_networks:
-    - network: GitHub
-      username: 3mpty9
     - network: LinkedIn
-      username: johnhwangyucho
+      username: hwangyucho
 
   sections:
     Education:
@@ -18,70 +18,161 @@ cv:
         location: West Lafayette, IN
         url: https://www.purdue.edu/
         area: Electrical and Computer Engineering
-        studyType: Ph.D.
-        start_date: 2023
-        end_date: present
+        studyType: Master of Science
+        start_date: 2024
+        end_date: 2026
         highlights:
-          - Focus on computer architecture, systems optimization, and secure ML acceleration.
+          - Advisor: Prof. Younghyun Kim
+          - Expected graduation: May 2026
+          - Research assistantship with full funding (Jan. 2025 - May 2026)
 
-      - institution: National University of Singapore
-        location: Singapore
-        url: https://www.nus.edu.sg/
-        area: Computer Engineering
-        studyType: B.Eng.
+      - institution: Hanyang University
+        location: Seoul, Korea
+        url: https://www.hanyang.ac.kr/
+        area: Electronic Engineering
+        studyType: Bachelor of Science (Highest Honors)
         start_date: 2018
-        end_date: 2022
+        end_date: 2024
+        highlights:
+          - Graduation: Feb. 2024
+          - GPA: 4.02/4.5
+          - "Dean's List: Spring 2018, Fall 2018, Fall 2021, Spring 2022, Spring 2023, Fall 2023"
+
+    Academic Interests:
+      - name: Research Interests
+        keywords:
+          - Domain-specific accelerators
+          - Hardware-software co-design for ML systems
+          - Energy-efficient accelerator architectures
 
     Experience:
-      - company: Networked and Embedded Intelligent Systems Lab
-        position: Graduate Researcher
-        location: Purdue University
-        start_date: 2023
+      - company: Purdue University
+        position: Graduate Research Assistant
+        location: West Lafayette, IN
+        start_date: 2024-08
         end_date: present
         highlights:
-          - Profiled bottlenecks in CKKS-based pipelines and improved key operations for practical secure inference.
-          - Developed architecture-aware optimization methods spanning software kernels and hardware constraints.
+          - Accelerated AI inference speed by 54.8% by designing a novel hardware architecture that optimizes neural network data processing while maintaining accuracy.
+          - Developed a Python simulation framework to evaluate MAC-level accuracy and latency across multiple bitwidths, validating superior accuracy-latency tradeoffs versus prior stochastic architectures.
+          - Improved processing efficiency by 17-55% across multiple neural network architectures, demonstrating scalability across AI applications.
 
-      - company: Systems and Software Projects
-        position: Research and Engineering Intern
-        location: Various
-        start_date: 2021
-        end_date: 2023
+      - company: Hanyang University
+        position: Undergraduate Research Assistant
+        location: Seoul, Korea
+        start_date: 2023-07
+        end_date: 2023-12
         highlights:
-          - Worked on performance-focused software systems and tooling for ML workflows.
+          - Enabled deployment of a 13B-parameter Korean LLM on a 16GB consumer GPU via QLoRA 4-bit quantization, reducing memory requirements by 82% while maintaining performance.
+          - Built a domain-specific Korean chatbot by generating an 11k Q&A dataset through GPT-4-based data augmentation.
+          - Developed an end-to-end RAG system combining a fine-tuned LLM with vector database retrieval, outperforming standalone ChatGPT and retrieval-only baselines on domain-specific questions.
 
-    Awards:
-      - title: DAC Young Fellowship
-        date: 2025
-        awarder: Design Automation Conference
-
-      - title: Emerging Contributor Award
-        date: 2025
-        awarder: Academic Program
+      - company: Korea Institute of Science and Technology
+        position: Co-op Research Engineer
+        location: Seoul, Korea
+        start_date: 2022-09
+        end_date: 2023-02
+        highlights:
+          - Designed and implemented a compact FPGA-based digital lock-in amplifier using Vivado, Vitis, and Virtex-7 to replace bulky analog equipment for gas measurement.
+          - Integrated real-time signal processing algorithms directly on FPGA hardware, eliminating dependency on external equipment while preserving measurement accuracy.
+          - Developed a four-layer PCB for an edge computing system using Altium and Allegro in cross-functional collaboration with hardware engineers.
 
     Publications:
-      - title: Architecture-Aware Operator Scheduling for Practical CKKS Inference
-        authors:
-          - John Hwangyu Cho
-          - Jane Collaborator
-          - Prof. Advisor
-        publisher: DAC
+      - title: "CO-MAC: A Center-Out Ordered Stochastic MAC for Low-Latency Inference"
+        publisher: Design Automation Conference (DAC)
         releaseDate: 2026
+        summary: "Hwangyu Cho, Tong Chen, and Younghyun Kim. Accepted."
 
-      - title: Profiling Bottlenecks in Homomorphic ML Workloads on Modern Accelerators
-        authors:
-          - John Hwangyu Cho
-          - Alex Collaborator
-          - Min Collaborator
-        publisher: MICRO
-        releaseDate: 2025
+    Presentations:
+      - bullet: "Purdue Institute of Chips and AI: Workshop on Chips & AI (Oct. 2025) - *Scalable Stochastic Computing for Efficient Machine Learning*"
+      - bullet: "ACM/IEEE DAC Young Fellow Program (Jul. 2025) - *Energy-Efficient SATD for High-Efficiency Video Transcoding*"
+
+    Awards:
+      - title: Young Fellowship
+        date: 2025
+        awarder: ACM/IEEE Design Automation Conference
+
+      - title: Excellence Award, Capstone Design Fair
+        date: 2023
+        awarder: School of Engineering, Hanyang University
+
+      - title: Honorable Mention, Graduate Projects and Theses Competition
+        date: 2023
+        awarder: Department of Electronic Engineering, Hanyang University
+
+    Projects:
+      - name: 8-bit Wallace Tree Multiplier for Low-Power VLSI Design
+        summary: "Virtuoso, NanoTime (Sep. 2025 - Dec. 2025)"
+        highlights:
+          - Designed and implemented full-custom layout for the partial product generator and 4-stage reduction tree.
+          - Developed an 8-bit MAC unit from schematic to layout by integrating a Wallace Tree multiplier with a 16-bit accumulator.
+          - Achieved 28% lower delay and 26% lower energy consumption than target specifications under worst-case conditions.
+
+      - name: Energy-efficient Systolic Array for Matrix Multiplication
+        summary: "C, PyTorch, Verilog (Jan. 2025 - May 2025)"
+        highlights:
+          - Reduced CNN inference energy consumption by up to 30% without degrading accuracy.
+          - Designed a systolic array architecture incorporating approximate multipliers.
+          - Modeled and evaluated approximate multipliers in C and Verilog, then integrated them into CNN models for end-to-end accuracy analysis.
+
+      - name: Thread-Aware GPU Prefetching
+        summary: "C++, CUDA, Accel-Sim (Jan. 2025 - May 2025)"
+        highlights:
+          - Implemented a prefetch cache and per-warp, global, and inter-thread tracking tables to generate GPU prefetch requests.
+          - Built a custom CUDA microbenchmark and evaluated IPC and L1/L2 cache miss rates on a V100 configuration.
+
+      - name: Adaptive Cache Compression Policy
+        summary: "Gem5, C++, Python (Aug. 2024 - Dec. 2024)"
+        highlights:
+          - Designed and implemented an adaptive L2 cache compression policy in Gem5 based on LRU replacement behavior.
+          - Evaluated L2 miss rate and CPI against always-compress and never-compress baselines using SPEC benchmarks on an ARM processor.
+
+      - name: Virtual Advanced Drum Machine (VAD)
+        summary: "PyTorch, CUDA, Jetson Nano, OpenCV (Mar. 2023 - Jul. 2023)"
+        highlights:
+          - Developed core code for drumming pose estimation, simultaneous action handling, and peripheral device control.
+          - Applied pose estimation to key-point tracking on Jetson Nano and created interactive audiovisual user experiences.
+
+      - name: Virtual Drum Machine (VDrum)
+        summary: "Python, Raspberry Pi, MediaPipe (Mar. 2023 - Jul. 2023)"
+        highlights:
+          - Built a Lingua Franca process to apply pose estimation on Raspberry Pi.
+          - Connected peripherals and implemented control software for drum machine playback.
+
+      - name: Swap Sort Simulation on Advanced RISC-V Pipeline
+        summary: "Verilog, Vivado, RISC-V ISA (Mar. 2022 - Jul. 2022)"
+        highlights:
+          - Integrated swap sort simulation on an advanced RISC-V pipeline with FPGA verification.
+          - Optimized the sorting algorithm in RISC-V assembly, reducing execution cycles by 90% and ranking top 8 of 40+ teams.
+
+    Professional Affiliations:
+      - bullet: IEEE-Eta Kappa Nu (HKN), Beta Chapter
 
     Skills:
-      - name: Research Areas
-        level: Advanced
-        icon: fa-solid fa-microchip
-        keywords: "Computer architecture, systems optimization, secure ML, homomorphic encryption, accelerator design"
+      - name: Tools
+        keywords:
+          - Linux
+          - Xilinx Vivado
+          - Xilinx Vitis
+          - Virtuoso
+          - NanoTime
+          - Allegro
+          - ORCAD
+          - LTSPICE
+          - PSPICE
 
-    Languages:
-      - name: English
-        summary: Fluent
+      - name: Programming Languages
+        keywords:
+          - Verilog
+          - C++
+          - C
+          - Python
+          - RISC-V (Assembly)
+          - MATLAB
+          - JavaScript
+
+      - name: Frameworks
+        keywords:
+          - Gem5
+          - Accel-Sim
+          - PyTorch
+          - CUDA
