@@ -1,8 +1,0 @@
----
-layout: post
-date: 2026-03-01 10:00:00-0500
-inline: true
-related_posts: false
----
-
-1 paper accepted @ DAC'26
