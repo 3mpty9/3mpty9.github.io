@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hwangyu Cho</title>
+    <meta
+      name="description"
+      content="Hwangyu Cho is an M.S. student in Electrical and Computer Engineering at Purdue University working on energy-efficient ML accelerators and memory-centric architectures for LLM inference."
+    />
+    <meta name="author" content="Hwangyu Cho" />
+    <meta property="og:title" content="Hwangyu Cho" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="M.S. student in ECE at Purdue University. Energy-efficient ML accelerators and memory-centric architectures for LLM inference."
+    />
+    <style>
+      :root {
+        --bg: #fdfdfc;
+        --text: #1c1c1c;
+        --muted: #6a6a66;
+        --rule: #e3e3de;
+        --link: #1d5fa8;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #141516;
+          --text: #e6e6e3;
+          --muted: #9b9b96;
+          --rule: #2d2e30;
+          --link: #86b7ec;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          "Noto Sans",
+          Arial,
+          sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 64px 24px 48px;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus-visible {
+        text-decoration: underline;
+      }
+
+      .intro {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .intro img {
+        width: 148px;
+        height: 148px;
+        flex: none;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+      }
+
+      .role {
+        margin: 6px 0 14px;
+        color: var(--muted);
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 18px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      h2 {
+        margin: 48px 0 16px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--rule);
+        font-size: 1.15rem;
+        font-weight: 600;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      .list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .list > li {
+        margin-bottom: 18px;
+      }
+
+      .list.compact > li {
+        margin-bottom: 8px;
+      }
+
+      .row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .title {
+        font-weight: 600;
+      }
+
+      .when {
+        flex: none;
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+      }
+
+      .detail {
+        margin: 2px 0 0;
+        color: var(--muted);
+      }
+
+      .me {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      footer {
+        margin-top: 56px;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 560px) {
+        main {
+          padding: 40px 20px 40px;
+        }
+
+        .intro {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+        }
+
+        .intro img {
+          width: 120px;
+          height: 120px;
+        }
+
+        .row {
+          flex-direction: column;
+          gap: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="intro">
+        <img src="../assets/img/my_photo.jpg" alt="Portrait of Hwangyu Cho" width="148" height="148" />
+        <div>
+          <h1>Hwangyu Cho</h1>
+          <p class="role">M.S. student in ECE, Purdue University</p>
+          <ul class="links">
+            <li><a href="mailto:cho620@purdue.edu">cho620@purdue.edu</a></li>
+            <li><a href="https://www.linkedin.com/in/hwangyucho">LinkedIn</a></li>
+            <li><a href="../assets/pdf/HwangyuCho_CV.pdf">CV</a></li>
+          </ul>
+        </div>
+      </header>
+
+      <section>
+        <h2>About</h2>
+        <p>
+          I am an M.S. student in Electrical and Computer Engineering at Purdue University, advised by Prof. Younghyun Kim in the
+          <a href="https://engineering.purdue.edu/neis/">NEIS Lab</a>. I work on energy-efficient hardware for machine learning: accelerator
+          architectures, memory-centric designs for LLM inference, and hardware-software co-design.
+        </p>
+        <p>
+          My recent work, CO-MAC (DAC 2026), is a stochastic multiply-accumulate unit that processes weights in a center-out order, reducing CNN
+          inference latency by up to 54.8% over the state-of-the-art stochastic accelerator. I am now exploring processing-in-memory architectures for
+          memory-bound LLM decoding. I will complete my M.S. in December 2026. Before Purdue, I received my B.S. in Electronic Engineering with
+          highest honors from Hanyang University.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <ul class="list">
+          <li>
+            <div class="row">
+              <span class="title">Graduate Research Assistant, Purdue University</span>
+              <span class="when">Aug. 2024 – Present</span>
+            </div>
+            <p class="detail">
+              Stochastic-computing accelerators for low-latency AI inference (CO-MAC, DAC 2026) and processing-in-memory architectures for LLM
+              inference.
+            </p>
+          </li>
+          <li>
+            <div class="row">
+              <span class="title">DRAM System Analysis Intern, SK hynix</span>
+              <span class="when">Jun. 2026 – Aug. 2026</span>
+            </div>
+            <p class="detail">
+              Built a heterogeneous NPU-PIM evaluation platform for LLM inference by coupling a cycle-level memory simulator with an NPU simulator.
+            </p>
+          </li>
+          <li>
+            <div class="row">
+              <span class="title">Undergraduate Research Assistant, Hanyang University</span>
+              <span class="when">Jul. 2023 – Dec. 2023</span>
+            </div>
+            <p class="detail">
+              Deployed a 13B-parameter Korean LLM on a 16 GB consumer GPU with QLoRA 4-bit quantization and built a RAG system for domain-specific
+              questions.
+            </p>
+          </li>
+          <li>
+            <div class="row">
+              <span class="title">Co-op Research Engineer, Korea Institute of Science and Technology</span>
+              <span class="when">Sep. 2022 – Feb. 2023</span>
+            </div>
+            <p class="detail">Designed an FPGA-based digital lock-in amplifier that replaced bulky analog equipment for gas measurement.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Publications</h2>
+        <ul class="list">
+          <li>
+            <div class="title">CO-MAC: A Center-Out Ordered Stochastic MAC for Low-Latency Inference</div>
+            <div><span class="me">Hwangyu Cho</span>, Tong Chen, Younghyun Kim</div>
+            <div>Design Automation Conference (DAC), 2026</div>
+            <div><a href="https://dl.acm.org/doi/abs/10.1145/3770743.3804415">paper</a></div>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Honors &amp; Awards</h2>
+        <ul class="list compact">
+          <li class="row">
+            <span><span class="title">Young Fellowship</span>, ACM/IEEE Design Automation Conference</span>
+            <span class="when">2025</span>
+          </li>
+          <li class="row">
+            <span><span class="title">Excellence Award</span>, Capstone Design Fair, School of Engineering, Hanyang University</span>
+            <span class="when">2023</span>
+          </li>
+          <li class="row">
+            <span
+              ><span class="title">Honorable Mention</span>, Graduate Projects and Theses Competition, Department of Electronic Engineering, Hanyang
+              University</span
+            >
+            <span class="when">2023</span>
+          </li>
+        </ul>
+      </section>
+
+      <footer>© 2026 Hwangyu Cho</footer>
+    </main>
+  </body>
+</html>
