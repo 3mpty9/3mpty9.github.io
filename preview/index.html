@@ -83,6 +83,33 @@
         float: right;
         margin-left: 16px;
       }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      li {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 0 14px;
+      }
+      li img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        border-radius: 6px;
+        background: #fff;
+      }
+      li p {
+        grid-column: 2;
+      }
+      @media (max-width: 480px) {
+        li time {
+          float: none;
+          display: block;
+          margin: 0;
+        }
+      }
       @media (prefers-color-scheme: dark) {
         :root {
           --link: #86b7ec;
@@ -137,22 +164,37 @@
     </p>
 
     <h2>Experience</h2>
-    <p>
-      <time>Aug. 2024 – Present</time><b>Purdue University</b><br />
-      <small>Graduate Research Assistant · Stochastic computing accelerators, PIM for LLM inference</small>
-    </p>
-    <p>
-      <time>Jun. 2026 – Aug. 2026</time><b>SK hynix</b><br />
-      <small>DRAM System Analysis Intern · NPU-PIM simulation platform for LLM inference</small>
-    </p>
-    <p>
-      <time>Jul. 2023 – Dec. 2023</time><b>Hanyang University</b><br />
-      <small>Undergraduate Research Assistant · LLM quantization and retrieval-augmented generation</small>
-    </p>
-    <p>
-      <time>Sep. 2022 – Feb. 2023</time><b>Korea Institute of Science and Technology (KIST)</b><br />
-      <small>Research Intern · FPGA-based digital lock-in amplifier</small>
-    </p>
+    <ul>
+      <li>
+        <img src="../assets/img/logo-purdue.png" alt="" />
+        <p>
+          <time>Aug. 2024 – Present</time><b>Purdue University</b><br />
+          Graduate Research Assistant<br />
+          <small>Stochastic computing accelerators, PIM for LLM inference</small>
+        </p>
+      </li>
+      <li>
+        <p>
+          <time>Jun. 2026 – Aug. 2026</time><b>SK hynix</b><br />
+          DRAM System Analysis Intern<br />
+          <small>PIM architecture modeling and evaluation for LLM inference</small>
+        </p>
+      </li>
+      <li>
+        <p>
+          <time>Jul. 2023 – Dec. 2023</time><b>Hanyang University</b><br />
+          Undergraduate Research Assistant<br />
+          <small>LLM quantization and retrieval-augmented generation</small>
+        </p>
+      </li>
+      <li>
+        <p>
+          <time>Sep. 2022 – Feb. 2023</time><b>Korea Institute of Science and Technology (KIST)</b><br />
+          Research Intern<br />
+          <small>FPGA-based digital lock-in amplifier</small>
+        </p>
+      </li>
+    </ul>
 
     <h2>Honors &amp; Awards</h2>
     <p><time>2025</time><b>Young Fellowship</b>, ACM/IEEE Design Automation Conference</p>
