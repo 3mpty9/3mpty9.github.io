@@ -8,12 +8,8 @@
     <style>
       :root {
         color-scheme: light dark;
+        background: Canvas;
         --link: #1d5fa8;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --link: #86b7ec;
-        }
       }
       body {
         max-width: 680px;
@@ -30,11 +26,14 @@
       a:hover {
         text-decoration: underline;
       }
-      header {
+      header,
+      article {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
         gap: 20px 28px;
+      }
+      header {
+        align-items: center;
       }
       header img {
         width: 140px;
@@ -43,6 +42,9 @@
       }
       header div {
         flex: 1 1 240px;
+      }
+      header a {
+        margin-right: 14px;
       }
       h1 {
         margin: 0;
@@ -55,15 +57,40 @@
         border-bottom: 1px solid #8884;
         font-size: 1.15rem;
       }
+      h3 {
+        margin: 0 0 4px;
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
       p {
         margin: 0 0 12px;
       }
-      header a {
-        margin-right: 14px;
-      }
-      small {
+      small,
+      time {
         font-size: 0.95rem;
         opacity: 0.7;
+      }
+      article img {
+        flex: 0 1 260px;
+        min-width: 0;
+        height: auto;
+        align-self: flex-start;
+      }
+      article div {
+        flex: 1 1 320px;
+      }
+      time {
+        float: right;
+        margin-left: 16px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --link: #86b7ec;
+        }
+        article img {
+          filter: invert(1) hue-rotate(180deg);
+          mix-blend-mode: screen;
+        }
       }
     </style>
   </head>
@@ -86,44 +113,55 @@
     </p>
     <p>I received my B.S. in Electronic Engineering with highest honors from Hanyang University.</p>
 
+    <h2>Research</h2>
+    <article>
+      <img src="../assets/img/co-mac.webp" alt="Center-out ordering: starting at zero and alternating outward" width="900" height="600" />
+      <div>
+        <h3>CO-MAC: A Center-Out Ordered Stochastic MAC for Low-Latency Inference</h3>
+        <p>
+          <u>Hwangyu Cho</u>, Tong Chen, Younghyun Kim<br />
+          Design Automation Conference (DAC), 2026 · <a href="https://dl.acm.org/doi/abs/10.1145/3770743.3804415">paper</a>
+        </p>
+        <p>
+          CO-MAC is a stochastic multiply-accumulate unit that orders weights center-out. It reduces CNN inference latency by up to 54.8% over the
+          state-of-the-art stochastic accelerator, and its 45 nm RTL implementation achieves lower area, power, and energy per cycle.
+        </p>
+      </div>
+    </article>
+
     <h2>Education</h2>
     <p>
-      <b>M.S. in Electrical and Computer Engineering, Purdue University</b><br />
-      <small>Dec. 2026 (expected) · Advisor: Prof. Younghyun Kim</small>
+      <time>Dec. 2026 (expected)</time><b>Purdue University</b><br />
+      <small>M.S. in Electrical and Computer Engineering · Advisor: Prof. Younghyun Kim</small>
     </p>
     <p>
-      <b>B.S. in Electronic Engineering, Hanyang University</b><br />
-      <small>Feb. 2024 · Highest honors · Advisor: Prof. Jungwook Choi</small>
+      <time>Feb. 2024</time><b>Hanyang University</b><br />
+      <small>B.S. in Electronic Engineering · Advisor: Prof. Jungwook Choi</small>
     </p>
 
     <h2>Experience</h2>
     <p>
-      <b>Graduate Research Assistant, Purdue University</b><br />
-      <small>Aug. 2024 – Present · Stochastic computing accelerators, PIM for LLM inference</small>
+      <time>Aug. 2024 – Present</time><b>Purdue University</b><br />
+      <small>Graduate Research Assistant · Stochastic computing accelerators, PIM for LLM inference</small>
     </p>
     <p>
-      <b>DRAM System Analysis Intern, SK hynix</b><br />
-      <small>Jun. 2026 – Aug. 2026 · NPU-PIM simulation platform for LLM inference</small>
+      <time>Jun. 2026 – Aug. 2026</time><b>SK hynix</b><br />
+      <small>DRAM System Analysis Intern · NPU-PIM simulation platform for LLM inference</small>
     </p>
     <p>
-      <b>Undergraduate Research Assistant, Hanyang University</b><br />
-      <small>Jul. 2023 – Dec. 2023 · LLM quantization and retrieval-augmented generation</small>
+      <time>Jul. 2023 – Dec. 2023</time><b>Hanyang University</b><br />
+      <small>Undergraduate Research Assistant · LLM quantization and retrieval-augmented generation</small>
     </p>
     <p>
-      <b>Research Intern, Korea Institute of Science and Technology (KIST)</b><br />
-      <small>Sep. 2022 – Feb. 2023 · FPGA-based digital lock-in amplifier</small>
-    </p>
-
-    <h2>Publications</h2>
-    <p>
-      <b>CO-MAC: A Center-Out Ordered Stochastic MAC for Low-Latency Inference</b><br />
-      <u>Hwangyu Cho</u>, Tong Chen, Younghyun Kim<br />
-      Design Automation Conference (DAC), 2026 · <a href="https://dl.acm.org/doi/abs/10.1145/3770743.3804415">paper</a>
+      <time>Sep. 2022 – Feb. 2023</time><b>Korea Institute of Science and Technology (KIST)</b><br />
+      <small>Research Intern · FPGA-based digital lock-in amplifier</small>
     </p>
 
     <h2>Honors &amp; Awards</h2>
-    <p><b>Young Fellowship</b>, ACM/IEEE Design Automation Conference, 2025</p>
-    <p><b>Excellence Award</b>, Capstone Design Fair, School of Engineering, Hanyang University, 2023</p>
-    <p><b>Honorable Mention</b>, Graduate Projects and Theses Competition, Department of Electronic Engineering, Hanyang University, 2023</p>
+    <p><time>2025</time><b>Young Fellowship</b>, ACM/IEEE Design Automation Conference</p>
+    <p><time>2023</time><b>Excellence Award</b>, Capstone Design Fair, School of Engineering, Hanyang University</p>
+    <p>
+      <time>2023</time><b>Honorable Mention</b>, Graduate Projects and Theses Competition, Department of Electronic Engineering, Hanyang University
+    </p>
   </body>
 </html>
